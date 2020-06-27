@@ -1,0 +1,39 @@
+<meta charser="UTF-8">
+
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+
+    function desenhaQuad(posicaoX, posicaoY, largura, altura, corFill, cor) {
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = corFill;
+        pincel.fillRect(posicaoX, posicaoY, largura, altura);
+        pincel.fillStroke = cor;
+        pincel.strokeRect(posicaoX, posicaoY, largura, altura);
+    }
+
+    for(var posicaoX = 0; posicaoX < 600; posicaoX = posicaoX + 50) {
+
+        desenhaQuad(posicaoX, 0, 50, 50, "green", "black");
+    }
+
+
+   // desenhaQuad(0, 0, 50, 50, "green", "black");
+
+/*
+    var posicaoX = 0;
+
+    while(posicaoX < 600) {
+
+        desenhaQuad(posicaoX, 0, 50, 50, "green", "black");
+        
+        posicaoX = posicaoX + 50;
+    }
+*/    
+
+</script>

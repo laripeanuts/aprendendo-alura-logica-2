@@ -1,0 +1,43 @@
+<meta charser="UTF-8">
+
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+
+    function desenhaQuad(posicaoX, posicaoY, largura, altura, corFill, cor) {
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = corFill;
+        pincel.fillRect(posicaoX, posicaoY, largura, altura);
+        pincel.fillStroke = cor;
+        pincel.strokeRect(posicaoX, posicaoY, largura, altura);
+    }
+
+    function desenhaTexto(texto, x , y) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='15px Verdana';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);    
+    }
+
+    desenhaTexto("2015", 30, 20);
+
+    desenhaQuad(30, 30, 50, 100, "red", "black");
+    desenhaQuad(30, 30, 50, 95, "yellow", "black");
+    desenhaQuad(30, 30, 50, 75, "green", "black");
+    desenhaQuad(30, 30, 50, 50, "blue", "black");
+
+    desenhaTexto("2016", 100, 20);
+
+    desenhaQuad(100, 30, 50, 100, "red", "black");
+    desenhaQuad(100, 30, 50, 98, "yellow", "black");
+    desenhaQuad(100, 30, 50, 85, "green", "black");
+    desenhaQuad(100, 30, 50, 65, "blue", "black");
+
+</script>

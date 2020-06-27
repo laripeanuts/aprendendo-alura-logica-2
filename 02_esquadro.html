@@ -1,0 +1,26 @@
+<meta charser="UTF-8">
+
+<canvas width="600" height="400">
+
+
+</canvas>
+
+<script>
+
+    function desenhaEsq(ax, ay, bx, by, cx, cy, cor) {
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.moveTo(ax, ay);
+        pincel.lineTo(bx, by);
+        pincel.lineTo(cx, cy);
+        pincel.fill();
+    }
+
+    desenhaEsq(50, 50, 50, 400, 400, 400, "black");
+    desenhaEsq(100, 175, 100, 350, 275, 350, "red")
+
+</script>

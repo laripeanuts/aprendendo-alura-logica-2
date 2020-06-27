@@ -1,0 +1,26 @@
+<meta charser="UTF-8">
+
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+
+    function desenhaCirc(posicaoX, posicaoY, size, cor) {
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(posicaoX, posicaoY, size, 0, 2 * 3.14);
+        pincel.fill();
+    }
+
+    desenhaCirc(300, 160, 20, "yellow");
+    desenhaCirc(260, 200, 20, "red");
+    desenhaCirc(300, 200, 20, "orange");
+    desenhaCirc(340, 200, 20, "black");
+    desenhaCirc(300, 240, 20, "blue");
+
+</script>

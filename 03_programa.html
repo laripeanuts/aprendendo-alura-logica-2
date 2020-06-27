@@ -1,0 +1,31 @@
+<meta charser="UTF-8">
+
+<canvas width="600" height="400">
+
+
+</canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirc(eventoInfo) {
+
+        var infoPageX = eventoInfo.pageX - tela.offsetLeft;
+        var infoPageY = eventoInfo.pageY - tela.offsetTop;
+
+        //alert("Cliquei em " + infoPageX + " e " + infoPageY);
+        console.log(eventoInfo);
+
+        pincel.fillStyle = "red";
+        pincel.beginPath();
+        pincel.arc(infoPageX, infoPageY, 10, 0, 2 * 3.14)
+        pincel.fill();
+    }
+
+    tela.onclick = desenhaCirc;
+</script>
