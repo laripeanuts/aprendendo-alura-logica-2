@@ -17,18 +17,18 @@
 
         console.log(x + ',' + y);
 
-        if(evento.shiftKey) {
-            if(raio < 40) {
+        if (evento.shiftKey) {
+            if (raio < 40) {
 
                 raio = raio + 10
             }
 
         }
 
-        if(evento.altKey) {
-            if(raio > 5) {
+        if (evento.altKey) {
+            if (raio > 5) {
 
-                raio = raio -5
+                raio = raio - 5
             }
 
         }
@@ -38,7 +38,7 @@
         pincel.arc(x, y, raio, 0, 2 * 3.14);
         pincel.fill();
 
-    } 
+    }
 
     tela.onclick = desenhaCirculo;
 
